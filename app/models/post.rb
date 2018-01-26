@@ -13,6 +13,10 @@ class Post < ActiveRecord::Base
       end
       if title.split(" ").include?("Wont")
         unless title.split(" ").include?("Believe")
+          errors.add(:title, "doesn't include clickbait")
+        end
+      end
+
     end
   end
 
