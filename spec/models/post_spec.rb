@@ -20,11 +20,11 @@ RSpec.describe Post, type: :model do
   let(:non_clickbait) { Post.new(valid_attrs.merge(title: "True Facts")) }
 
   it "is valid" do
+    binding.pry
     expect(valid_post).to be_valid
   end
 
   it "is invalid without a title" do
-    binding.pry
     expect(missing_title).to be_invalid
   end
 
