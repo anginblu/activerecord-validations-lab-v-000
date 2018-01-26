@@ -16,7 +16,6 @@ class Post < ActiveRecord::Base
           errors.add(:title, "doesn't include clickbait")
         end
       end
-
     end
   end
 
