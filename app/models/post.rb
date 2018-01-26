@@ -3,7 +3,7 @@ class Post < ActiveRecord::Base
   validates :content, presence: true, length: { :minimum => 250 }
   validates :summary, presence: true, length: { :maximum => 250 }
   validates :category, presence: true, inclusion: { in: ["Fiction", "Non-Fiction"] }
-
+  validate :clickbait_in_title
 
   def clickbait_in_title
     @array = ["Secret", "Top ", "Guess", "Wont", "Believe"]
