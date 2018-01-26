@@ -8,7 +8,8 @@ class Post < ActiveRecord::Base
   def clickbait_in_title
     @array = ["Secret", "Top ", "Guess", "Wont", "Believe"]
     unless @array.any? {|i| title.split(" ").include?(i)}
-
+      errors.add(:title, "doesn't include clickbait")
+    end
   end
 
 end
