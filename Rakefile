@@ -4,3 +4,8 @@
 require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
+
+desc "Task description"
+task :console => [:dependent, :tasks] do
+  pry.start
+end
