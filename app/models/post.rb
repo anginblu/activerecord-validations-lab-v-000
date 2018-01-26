@@ -11,6 +11,8 @@ class Post < ActiveRecord::Base
       unless @array.any? {|i| title.split(" ").include?(i)}
         errors.add(:title, "doesn't include clickbait")
       end
+      if title.split(" ").include?("Wont")
+        unless title.split(" ").include?("Believe")
     end
   end
 
