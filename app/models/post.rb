@@ -5,8 +5,11 @@ class Post < ActiveRecord::Base
   validates :category, presence: true, inclusion: { in: ["Fiction", "Non-Fiction"] }
 
 
-  def clickbait
-
+  def clickbait(title)
+    @array = ["Secret", "Top ", "Guess", "Wont", "Believe"]
+    @array.each do |phrase|
+      if title.split(" ").include?(phrase)
+        
   end
   
 end
